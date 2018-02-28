@@ -1,0 +1,15 @@
+﻿  AccountVerify.cpp
+c:\users\yen\documents\github\verifyaccount\lib\connector c++ 1.1\include\cppconn\sqlstring.h(39): warning C4251: 'sql::SQLString::realStr': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' 必須有 DLL 介面，才能被為 class 'sql::SQLString' 的用戶端使用
+  e:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xstring(4054): note: 請參閱 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' 的宣告
+c:\users\yen\documents\github\verifyaccount\lib\connector c++ 1.1\include\cppconn\exception.h(61): warning C4251: 'sql::SQLException::sql_state': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' 必須有 DLL 介面，才能被為 class 'sql::SQLException' 的用戶端使用
+  e:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xstring(4054): note: 請參閱 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' 的宣告
+c:\users\yen\documents\github\verifyaccount\lib\connector c++ 1.1\include\cppconn\exception.h(145): warning C4251: 'sql::SQLUnsupportedOptionException::option': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' 必須有 DLL 介面，才能被為 struct 'sql::SQLUnsupportedOptionException' 的用戶端使用
+  e:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\xstring(4054): note: 請參閱 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' 的宣告
+  Info: Boost.Config is older than your compiler version - probably nothing bad will happen - but you may wish to look for an update Boost version.  Define BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE to suppress this message.
+c:\users\yen\documents\github\verifyaccount\lib\connector c++ 1.1\include\mysql_connection.h(175): warning C4251: 'sql::mysql::MySQL_Connection::proxy': class 'boost::shared_ptr<sql::mysql::NativeAPI::NativeConnectionWrapper>' 必須有 DLL 介面，才能被為 class 'sql::mysql::MySQL_Connection' 的用戶端使用
+  c:\users\yen\documents\github\verifyaccount\lib\connector c++ 1.1\include\mysql_connection.h(175): note: 請參閱 'boost::shared_ptr<sql::mysql::NativeAPI::NativeConnectionWrapper>' 的宣告
+c:\users\yen\documents\github\verifyaccount\lib\connector c++ 1.1\include\mysql_connection.h(179): warning C4251: 'sql::mysql::MySQL_Connection::service': class 'boost::scoped_ptr<sql::mysql::MySQL_Statement>' 必須有 DLL 介面，才能被為 class 'sql::mysql::MySQL_Connection' 的用戶端使用
+  c:\users\yen\documents\github\verifyaccount\lib\connector c++ 1.1\include\mysql_connection.h(179): note: 請參閱 'boost::scoped_ptr<sql::mysql::MySQL_Statement>' 的宣告
+c:\users\yen\documents\github\verifyaccount\lib\connector c++ 1.1\include\mysql_connection.h(181): warning C4251: 'sql::mysql::MySQL_Connection::intern': class 'boost::scoped_ptr<sql::mysql::MySQL_ConnectionData>' 必須有 DLL 介面，才能被為 class 'sql::mysql::MySQL_Connection' 的用戶端使用
+  c:\users\yen\documents\github\verifyaccount\lib\connector c++ 1.1\include\mysql_connection.h(181): note: 請參閱 'boost::scoped_ptr<sql::mysql::MySQL_ConnectionData>' 的宣告
+  AccountVerify.vcxproj -> C:\Users\YEN\Documents\GitHub\VerifyAccount\x64\Debug\AccountVerify.exe
