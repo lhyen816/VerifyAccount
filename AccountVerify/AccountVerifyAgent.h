@@ -19,7 +19,7 @@ public:
 	bool InitConnection();
 	void ResetAccountTable();
 	void EnsureAccountTable();
-	bool VerifyAcc(char* account, char* pwd, bool isAutoCreate);
+	bool VerifyAcc(string account, string pwd, bool isAutoCreate);
 	AccountVerifyAgent() : con(), stmt(), pstmt() {}
 
 private:
@@ -66,16 +66,17 @@ void AccountVerifyAgent::EnsureAccountTable()
 	return;
 }
 
-bool AccountVerifyAgent::VerifyAcc(char* account, char* pwd, bool isAutoCreate)
+bool AccountVerifyAgent::VerifyAcc(string account, string pwd, bool isAutoCreate)
 {
 	ResultSet *result;
 
 	pstmt = con->prepareStatement("SELECT * FROM Account where id = ?;");
-	pstmt->setString(1, account);
+	pstmt->setString(1, account.c_str());
 	result = pstmt->executeQuery();
 	if (result->next())
 	{
-		if (strcmp(result->getString(2).c_str(), pwd) == 0)
+		int retCode = result->getString(2).compare(pwd.c_str());
+		if (retCode == 0)
 		{
 			delete result;
 			delete pstmt;
@@ -85,8 +86,8 @@ bool AccountVerifyAgent::VerifyAcc(char* account, char* pwd, bool isAutoCreate)
 	else if (isAutoCreate)
 	{
 		pstmt = con->prepareStatement("INSERT INTO Account(id, password) VALUES(?,?)");
-		pstmt->setString(1, account);
-		pstmt->setString(2, pwd);
+		pstmt->setString(1, account.c_str());
+		pstmt->setString(2, pwd.c_str());
 		pstmt->execute();
 		cout << "Account Not Found, AutoCreate...." << endl;
 
